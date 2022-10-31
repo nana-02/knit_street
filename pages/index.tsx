@@ -1,5 +1,6 @@
+import {Text} from 'stories/text';
 function HomePage() {
-  return <div>Welcome to Next.js!</div>
+  return <div><Text>Welcome to Next.js!</Text></div>
 }
 
 export default HomePage

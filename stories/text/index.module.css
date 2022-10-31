@@ -1,0 +1,21 @@
+@import 'stories/color/index.module.css';
+
+.text {
+  font-size: 11px;
+
+  &_default {
+    color: $default;
+  }
+
+  &_alert {
+    color: $alert;
+  }
+
+  &_accent {
+    color: $accent;
+  }
+
+  &_safe {
+    color: $safe;
+  }
+}
