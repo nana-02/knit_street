@@ -1,7 +1,7 @@
 @import 'stories/color/index.module.css';
 
 .text {
-  font-size: 11px;
+  font-size: 13px;
 
   &_default {
     color: $default;

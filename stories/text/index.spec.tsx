@@ -1,5 +1,5 @@
 import { Text } from 'stories/text';
-import { getByTestId, render } from '@testing-library/react';
+import { render } from '@testing-library/react';
 
 test('return null if children is empty', () => {
   const { container } = render(<Text></Text>);

@@ -1,10 +1,11 @@
 @import 'stories/color/index.module.css';
 
 .button {
-  widht: 180px;
+  width: 180px;
   height: 40px;
   border: none;
   border-radius: 6px;
+  cursor: pointer;
 
   &:hover {
     opacity: 0.9;
