@@ -35,4 +35,17 @@ describe('form > input', () => {
       getByRole('alertdialog', { description: /入力内容を確認してください/ })
     ).toBeTruthy();
   });
+
+  it('get by display value', () => {
+    const { getByDisplayValue } = render(
+      <Input
+        value="Default"
+        labelText={'User'}
+        id="user"
+        placeholder="userを入力してください"
+        alert={['入力内容を確認してください', '数字で入力してください']}
+      />
+    );
+    expect(getByDisplayValue('Default')).toBeTruthy();
+  });
 });
