@@ -7,10 +7,12 @@ const createJestConfig = nextJest({
 
 // Jestのカスタム設定を設置する場所。従来のプロパティはここで定義。
 const customJestConfig = {
+  collectCoverage: true,
   // jest.setup.jsを作成する場合のみ定義。
   // setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
   moduleNameMapper: {
     "^stories/(.*)$": "<rootDir>/stories/$1",
+    "^functions/(.*)$": "<rootDir>/functions/$1",
   },
   testEnvironment: "jest-environment-jsdom",
 };

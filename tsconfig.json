@@ -16,7 +16,8 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "stories/*": ["./stories/*"]
+      "stories/*": ["./stories/*"],
+      "functions/*": ["./functions/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

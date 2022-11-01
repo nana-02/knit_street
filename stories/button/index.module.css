@@ -1,0 +1,39 @@
+@import 'stories/color/index.module.css';
+
+.button {
+  widht: 180px;
+  height: 40px;
+  border: none;
+  border-radius: 6px;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:active {
+    -webkit-transform: translate(0, 1px);
+    -moz-transform: translate(0, 1px);
+    transform: translate(0, 1px);
+    border-bottom: none;
+  }
+
+  &_default {
+    color: $bg;
+    background-color: $default;
+  }
+
+  &_alert {
+    color: $bg;
+    background-color: $alert;
+  }
+
+  &_accent {
+    color: $bg;
+    background-color: $accent;
+  }
+
+  &_safe {
+    color: $bg;
+    background-color: $safe;
+  }
+}
