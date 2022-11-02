@@ -21,6 +21,7 @@ export const Radio: React.FC<IProps> = ({ selected, data, onClick }) => {
   return (
     <div>
       {data.map((item) => {
+        const checked = item.id === val;
         return (
           <React.Fragment key={item.id}>
             <span
@@ -28,9 +29,9 @@ export const Radio: React.FC<IProps> = ({ selected, data, onClick }) => {
               id={item.id}
               onClick={(e) => handleClick(e.currentTarget.id)}
               role="radio"
-              aria-checked={item.id === val}
+              aria-checked={checked}
             >
-              {item.id === val ? (
+              {checked ? (
                 <IoRadioButtonOnOutline
                   className={cssModule.radio__icon}
                   onClick={(e) => handleClick(e.currentTarget.id)}

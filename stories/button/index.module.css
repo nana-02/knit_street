@@ -1,4 +1,4 @@
-@import 'stories/color/index.module.css';
+@import url('stories/color/index.module.css');
 
 .button {
   width: 180px;
@@ -12,8 +12,6 @@
   }
 
   &:active {
-    -webkit-transform: translate(0, 1px);
-    -moz-transform: translate(0, 1px);
     transform: translate(0, 1px);
     border-bottom: none;
   }

@@ -1,4 +1,19 @@
 {
   "editor.tabSize": 2,
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  // デフォルトのフォーマッタを prettier に設定
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // ファイル保存時、prettier による自動フォーマット
+  // ファイル保存時、ESLint, Stylelint による自動フォーマット
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  // 追記
+  // css ファイルは Stylelint でフォーマットするため、Pretteir によるフォーマットを回避
+  "[css]": {
+    "editor.formatOnSave": false
+  },
+  // VS Code の CSS の Lint オフ
+  // Stylelint とのバッティング回避
+  "css.validate": false
 }

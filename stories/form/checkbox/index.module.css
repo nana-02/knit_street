@@ -1,0 +1,9 @@
+.checkbox {
+  align-items: center;
+  display: flex;
+  user-select: none;
+
+  &__icon {
+    margin-right: 4px;
+  }
+}

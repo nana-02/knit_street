@@ -1,4 +1,4 @@
-@import 'stories/color/index.module.css';
+@import url('stories/color/index.module.css');
 
 .card {
   display: inline-block;
