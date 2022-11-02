@@ -1,8 +1,3 @@
-/**
- * [] 選択されているかどうかのテスト
- * [] 表示テスト
- */
-
 import { Radio } from 'stories/form/radio';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';

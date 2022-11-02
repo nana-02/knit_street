@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { IoRadioButtonOff, IoRadioButtonOnOutline } from 'react-icons/io5';
 import cssModule from './index.module.css';
 
 interface IProps {
@@ -10,7 +11,7 @@ interface IProps {
   }[];
   onClick?: (val: string) => void;
 }
-export const Radio: React.FC<IProps> = ({ name, selected, data, onClick }) => {
+export const Radio: React.FC<IProps> = ({ selected, data, onClick }) => {
   const [val, setVal] = useState(selected);
   if (!data || data.length <= 0) return null;
   const handleClick = (val: string) => {
@@ -18,20 +19,30 @@ export const Radio: React.FC<IProps> = ({ name, selected, data, onClick }) => {
     setVal(val);
   };
   return (
-    <div className={cssModule.radio}>
+    <div>
       {data.map((item) => {
         return (
           <React.Fragment key={item.id}>
-            <input
-              name={name}
-              onChange={(e) => handleClick(e.currentTarget.id)}
-              type="radio"
+            <span
+              className={cssModule.radio}
               id={item.id}
-              checked={item.id === val}
-            ></input>
-            <label htmlFor={item.id} className={cssModule.radio__button}>
+              onClick={(e) => handleClick(e.currentTarget.id)}
+              role="radio"
+              aria-checked={item.id === val}
+            >
+              {item.id === val ? (
+                <IoRadioButtonOnOutline
+                  className={cssModule.radio__icon}
+                  onClick={(e) => handleClick(e.currentTarget.id)}
+                />
+              ) : (
+                <IoRadioButtonOff
+                  className={cssModule.radio__icon}
+                  onClick={(e) => handleClick(e.currentTarget.id)}
+                />
+              )}
               {item.value}
-            </label>
+            </span>
           </React.Fragment>
         );
       })}
