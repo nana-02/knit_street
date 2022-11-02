@@ -8,10 +8,15 @@ interface IProps {
     id: string;
     value: string;
   }[];
+  onClick?: (val: string) => void;
 }
-export const Radio: React.FC<IProps> = ({ name, selected, data }) => {
+export const Radio: React.FC<IProps> = ({ name, selected, data, onClick }) => {
   const [val, setVal] = useState(selected);
   if (!data || data.length <= 0) return null;
+  const handleClick = (val: string) => {
+    onClick && onClick(val);
+    setVal(val);
+  };
   return (
     <div className={cssModule.radio}>
       {data.map((item) => {
@@ -19,7 +24,7 @@ export const Radio: React.FC<IProps> = ({ name, selected, data }) => {
           <React.Fragment key={item.id}>
             <input
               name={name}
-              onChange={(e) => setVal(e.currentTarget.id)}
+              onChange={(e) => handleClick(e.currentTarget.id)}
               type="radio"
               id={item.id}
               checked={item.id === val}
